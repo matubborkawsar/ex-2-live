@@ -103,7 +103,7 @@ i {
     gap: 10px;
     background: rgb(255, 255, 255);
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.125);
-    /* display: none; */
+    display: none;
 }
 .cart-container.active {
     display: flex;
