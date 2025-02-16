@@ -81,16 +81,16 @@ function updateSubtotal() {
     applyButton.addEventListener("click", () => {
         let promoCode = document.querySelector(
             ".cart-container .subtotal .discount input"
-        );
+        ).value;
         let discountAmount = 0;
 
-        if (promoCode.value == discount[0]) {
+        if (promoCode == discount[0]) {
             discountAmount = total * 0.1;
             couponSuccessMsg.classList.add("active");
             setTimeout(() => {
                 couponSuccessMsg.classList.remove("active");
             }, 2000);
-        } else if (promoCode.value == discount[1]) {
+        } else if (promoCode == discount[1]) {
             discountAmount = total * 0.05;
             couponSuccessMsg.classList.add("active");
             setTimeout(() => {
@@ -107,7 +107,6 @@ function updateSubtotal() {
         document.querySelector(".subtotal .finale span").innerText = (
             total - discountAmount
         ).toFixed(2);
-        promoCode.value = "";
     });
 }
 
